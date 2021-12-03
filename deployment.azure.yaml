@@ -14,19 +14,20 @@ spec:
         spec:
             containers:
             - name: localizer
-              image: dnmsdocker/localizer:1.0.0
+              image: dnmsdocker/localizer:1.0.1
               ports:
                 - containerPort: 8080
 ---
-kind: Service
+
 apiVersion: v1
+kind: Service
 metadata:
-    name: localizer-service
-    spec:
-        type: LoadBalancer
-        selector:
-            app: localizer
-        ports:
-        - protocol: TCP
-          port: 8080
-          targetPort: 8080
+  type: LoadBalancer
+  name: localizer-service
+spec:
+  selector:
+    app: localizer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

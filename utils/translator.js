@@ -2,7 +2,7 @@ const axios = require('axios').default;
 const baseUrl = "https://api.cognitive.microsofttranslator.com/"
 const { v4: uuidv4} = require('uuid')
 
-var subscriptionKey = 'f5a8ce60cc674ba993cd3e3071b394ea'
+var subscriptionKey = 'ee23f9c1f07a4091ab7748ef6b316dc4'
 var location = 'centralindia'
 
 const translateFromLangToLang = (text, fromLang, toLang, cb) => {
